@@ -1,6 +1,6 @@
 import bpy
 import math
-
+from ..core.logger import logger
 
 def build_column(
     context,
@@ -12,6 +12,7 @@ def build_column(
     shafts,
     seed,
 ):
+    
     # Главен ствол
     bpy.ops.mesh.primitive_cylinder_add(
         vertices=48,
@@ -33,6 +34,8 @@ def build_column(
 
     base = context.active_object
     base.name = "Column_Base"
+
+    logger.info("Generating Gothic column...")
 
     # Капител
     bpy.ops.mesh.primitive_cylinder_add(
@@ -72,3 +75,4 @@ def build_column(
     bpy.ops.object.join()
 
     column.name = "Gothic_Column"
+    logger.info("Column generated successfully.")

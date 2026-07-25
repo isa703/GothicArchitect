@@ -1,2 +1,2 @@
 # GothicArchitect
-Open-source проект,Add Gothic Column in Geometry Nodes  for Blender
+Open-source progekt,Add Gothic Column in Blender with use Geometry Nodes
